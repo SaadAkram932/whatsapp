@@ -1,0 +1,95 @@
+        .hidden {
+            display: none !important;
+        }
+ body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #50da5c;
+            color: #6fc575;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #msg {
+            background-color: #ffffff;
+            border: 1px solid #6bcf6e;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(27, 94, 32, 0.15);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        #qr-container {
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            padding-bottom: 50px;
+            background-color: #a5d6a7;
+            border-radius: 10px;
+        }
+
+        textarea {
+            width: 95%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #c8e6c9;
+            font-size: 1rem;
+            resize: none;
+            margin-bottom: 15px;
+            background-color: #f1f8e9;
+        }
+
+        button {
+            background-color: #43a047;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        #response {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #388e3c;
+        }
+
+        /* Exclusive label for the phone number */
+label[for="phone-number"] {
+    display: block;
+    font-weight: bold;
+    color: #2e7d32; /* Matches your h1/h2 */
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Exclusive input styling for phone number */
+input#phoneNumber {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f1f8e9; /* Match textarea background */
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    color: #2e7d32;
+}

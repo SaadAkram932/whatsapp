@@ -1,0 +1,20 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "This i an app created by Muhammah Saad on the request of Farhan shafiq. All right reserved to owner. Contact owner before copying it in any form. Gmai: ranasaad.dev@gmail.com.",
+  "license": "ISC",
+  "author": "Muhammad Saad",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1",
+    "whatsapp-web.js": "^1.31.0"
+  },
+  "keywords": []
+}

@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+.wwebjs_cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+
+# Env files
+.env
+
+# Runtime files
+*.pid
+*.seed
+*.bak
+*.swp
