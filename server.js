@@ -88,7 +88,9 @@ console.log(req.body.message);
 const results = await Promise.all(sendPromises);
 const sent = results.filter(r => r.success).length;
 const failed = results.filter(r => !r.success);
-
+    } catch (err) {
+        return {error: err.message };
+    }
 
 
 });
