@@ -75,17 +75,26 @@ console.log(req.body.message);
         if (!client.info || !client.info.wid) {
             return res.status(503).json({ success: false, error: 'WhatsApp client not connected' });
         }
-        let sent = 0;
-        let failed = [];
-        for (const number of numberx) {
-            const chatId = `${number}@c.us`;
-            try {
-                await client.sendMessage(chatId, req.body.message);
-                sent++;
-            } catch (err) {
-                failed.push({ number, error: err.message });
-            }
-        }
+     const sendPromises = numberx.map(async (number) => {
+    const chatId = `${number}@c.us`;
+    try {
+        await client.sendMessage(chatId, req.body.message);
+        return { number, success: true };
+    } catch (err) {
+        return { number, success: false, error: err.message };
+    }
+});
+
+const results = await Promise.all(sendPromises);
+
+const sent = results.filter(r => r.success).length;
+const failed = results.filter(r => !r.success);
+
+if (failed.length === 0) {
+    res.json({ success: true, sent });
+} else {
+    res.status(207).json({ success: false, sent, failed });
+}
         if (failed.length === 0) {
             res.json({ success: true, sent });
         } else {
