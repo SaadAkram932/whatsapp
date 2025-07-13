@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Whatsapp</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div id="msg">
-        <h1 id="status-title">Scan QR Code to Login</h1>
+        <h1 id="status-title">Wit for QR Code</h1>
         <div id="qr-container"></div>
-
-        <!-- <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ranasaad932" data-color="#FF5F5F" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script> -->
-
         <div id="message-form" class="hidden">
             <h2>Send WhatsApp Message</h2>
             <form id="send-form" method="POST">
@@ -22,7 +17,6 @@
                 <textarea id="message" name="message" placeholder="Your message" required></textarea><br>
                 <button type="submit" id="send-btn">Send</button>
             </form>
-
             <button id="disconnect-btn" class="hidden" style="margin-top:15px;">Disconnect</button>
             <div id="response"></div>
         </div>
@@ -31,5 +25,4 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
